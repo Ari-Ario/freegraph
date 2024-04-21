@@ -8,10 +8,6 @@ export const routes = [
     },
     
     {
-        path: "/login",
-        component: () => import("./pages/Auth/Login.vue"),
-    },
-    {
         path: "/register",
         component: () => import("./pages/Auth/Register.vue"),
     },

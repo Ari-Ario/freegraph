@@ -6,7 +6,7 @@ import {useRouter} from 'vue-router';
 // import BlogHeader from '../components/BlogHeader.vue';  
 // import Navbar from '@/components/Navbar.vue';
 
-import { Axios } from 'axios';
+import axios from 'axios';
 
 const router = useRouter();
 const store = useAuthStore();
@@ -34,18 +34,18 @@ function registerUser(){
     <div class="form-container">
         <form @submit.prevent="registerUser" class="register-form">
         <!-- Name, email, and password inputs -->
-        <input name="name" type="text" v-model="user.firstName" placeholder="Vorname" required />
-        <input name="name" type="text" v-model="user.lastName" placeholder="Nachname" required />
+        <input name="name" type="text" v-model="user.firstName" placeholder="First name" required />
+        <input name="name" type="text" v-model="user.lastName" placeholder="Last name" required />
         <input name="email" type="email" v-model="user.email" placeholder="Email" required />
-        <input name="password" type="password" v-model="user.password" placeholder="Passwort" required />
-        <input name="password_confirmation"  type="password"  v-model="user.password_confirmation" placeholder="Passwort wiederholen" required />
+        <input name="password" type="password" v-model="user.password" placeholder="Password" required />
+        <input name="password_confirmation"  type="password"  v-model="user.password_confirmation" placeholder="Password confirmation" required />
 
 
         <button type="submit">Register</button>
 
 
         <div>
-            <router-link to="/">Link zur Homepage</router-link>
+            <router-link to="/">Link to Login page</router-link>
         </div>
 
         </form>

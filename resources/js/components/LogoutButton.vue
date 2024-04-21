@@ -7,7 +7,7 @@
 
   const logout = async () => {
       await store.logout().then(() => {
-          router.push('/login');
+          router.push('/');
       });
   }
 </script>
