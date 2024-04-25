@@ -44,9 +44,9 @@ function registerUser(){
         <button type="submit">Register</button>
 
 
-        <div>
-            <router-link to="/">Link to Login page</router-link>
-        </div>
+        <button>
+            <router-link to="/" class="link">Already on LinkedIn? Sign in</router-link>
+        </button>
 
         </form>
     </div>
@@ -84,5 +84,16 @@ font-size: 16px;
 background-color: #007BFF;
 color: white;
 cursor: pointer;
+}
+
+button .link{
+background-color: #007BFF;
+color: white;
+cursor: pointer;
+text-decoration: none;
+opacity: 70%;
+}
+.link:hover {
+    opacity: 100%;
 }
 </style>

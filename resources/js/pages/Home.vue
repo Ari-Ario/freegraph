@@ -44,12 +44,25 @@ const login = async() => {
             <!-- Email and password inputs -->
             <input type="email" v-model="user.email" placeholder="Email" required />
             <input type="password" v-model="user.password" placeholder="Password" required />
-            <!-- Submit button -->
-            <button type="submit">Login</button>
+
 
             <div>
-                <router-link to="/register">Link to Register page</router-link>
+                <router-link to="/register">Forgot password?</router-link>
             </div>
+            <!-- Submit button -->
+            <button type="submit">Login</button>
+            
+            <div>
+                <p class="or">or</p>
+            </div>
+
+            <button>
+                <router-link to="/register" class="link">Continue with Google</router-link>
+            </button>
+
+            <button>
+                <router-link to="/register" class="link">New to Freegram? join now</router-link>
+            </button>
         </form>
     </div>
 </template>
@@ -85,5 +98,28 @@ font-size: 16px;
 background-color: #007BFF;
 color: white;
 cursor: pointer;
+text-decoration: none;
+}
+
+.link{
+background-color: #007BFF;
+color: white;
+cursor: pointer;
+text-decoration: none;
+}
+
+button .link{
+background-color: #007BFF;
+color: white;
+cursor: pointer;
+text-decoration: none;
+opacity: 70%;
+}
+.link:hover {
+    opacity: 100%;
+}
+
+.or {
+    text-align: center;
 }
 </style>
